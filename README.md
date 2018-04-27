@@ -1,1 +1,12 @@
-"# Transformers-lab" 
+# Transformers-lab
+
+#project checkout:
+git clone https://github.com/ebhun00/Transformers-lab.git
+
+#project build
+gradlew.bat clean eclipse  -- download dependencies and setup workspace
+gradlew.bat build -- to generate application jar in build folder
+gradlew.bat bootRun  -- to run application in local
+
+#FFFFFF project details
+checkout "documentation" folder
