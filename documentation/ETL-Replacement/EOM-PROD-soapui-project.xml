@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="c8a958ac-f3b2-40d4-b5b4-c878c6aca2bd" activeEnvironment="Default" name="EOM_PROD" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="ab1a0574-0ae1-493b-88ec-30eb3aec585c" wsaVersion="NONE" name="SecurityWebServiceSoapBinding" type="wsdl" bindingName="{http://security.services.scope.manh.com/}SecurityWebServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://ecom-eom.safeway.com/services/SecuritySOAPService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://ecom-eom.safeway.com/services/SecuritySOAPService?wsdl"><con:part><con:url>http://ecom-eom.safeway.com/services/SecuritySOAPService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SecurityWebService" targetNamespace="http://security.services.scope.manh.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://security.services.scope.manh.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://security.services.scope.manh.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="UserDetails" type="tns:userServiceObject"/>
+      <xs:element name="getAuthToken" type="tns:getAuthToken"/>
+      <xs:element name="getAuthTokenResponse" type="tns:getAuthTokenResponse"/>
+      <xs:element name="getUserDetails" type="tns:getUserDetails"/>
+      <xs:element name="getUserDetailsResponse" type="tns:getUserDetailsResponse"/>
+      <xs:element name="signIn" type="tns:signIn"/>
+      <xs:element name="signInResponse" type="tns:signInResponse"/>
+      <xs:element name="signOut" type="tns:signOut"/>
+      <xs:element name="signOutResponse" type="tns:signOutResponse"/>
+      <xs:complexType name="signOut">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="signOutResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="getAuthToken">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getAuthTokenResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getUserDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getUserDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:userServiceObject"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="userServiceObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="addressLine1" type="xs:string"/>
+          <xs:element minOccurs="0" name="addressLine2" type="xs:string"/>
+          <xs:element minOccurs="0" name="city" type="xs:string"/>
+          <xs:element minOccurs="0" name="companyId" type="xs:string"/>
+          <xs:element minOccurs="0" name="companyName" type="xs:string"/>
+          <xs:element minOccurs="0" name="country" type="xs:string"/>
+          <xs:element minOccurs="0" name="defaultBusinessUnitId" type="xs:string"/>
+          <xs:element minOccurs="0" name="defaultBusinessUnitName" type="xs:string"/>
+          <xs:element minOccurs="0" name="defaultRegionId" type="xs:string"/>
+          <xs:element minOccurs="0" name="defaultRegionName" type="xs:string"/>
+          <xs:element minOccurs="0" name="faxNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+          <xs:element minOccurs="0" name="isActive" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+          <xs:element minOccurs="0" name="locale" type="xs:string"/>
+          <xs:element minOccurs="0" name="location" type="xs:string"/>
+          <xs:element minOccurs="0" name="middleName" type="xs:string"/>
+          <xs:element minOccurs="0" name="permissionCodes" type="xs:string"/>
+          <xs:element minOccurs="0" name="prefix" type="xs:string"/>
+          <xs:element minOccurs="0" name="primaryEmail" type="xs:string"/>
+          <xs:element minOccurs="0" name="primaryPhoneNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="role" type="xs:string"/>
+          <xs:element minOccurs="0" name="secondaryEmail" type="xs:string"/>
+          <xs:element minOccurs="0" name="secondaryPhoneNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="state" type="xs:string"/>
+          <xs:element minOccurs="0" name="title" type="xs:string"/>
+          <xs:element minOccurs="0" name="type" type="xs:string"/>
+          <xs:element minOccurs="0" name="userId" type="xs:string"/>
+          <xs:element minOccurs="0" name="zip" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="signIn">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="signInResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="signOut">
+    <wsdl:part element="tns:signOut" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="signOutResponse">
+    <wsdl:part element="tns:signOutResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getAuthToken">
+    <wsdl:part element="tns:getAuthToken" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getAuthTokenResponse">
+    <wsdl:part element="tns:getAuthTokenResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getUserDetails">
+    <wsdl:part element="tns:getUserDetails" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getUserDetailsResponse">
+    <wsdl:part element="tns:getUserDetailsResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="signIn">
+    <wsdl:part element="tns:signIn" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="signInResponse">
+    <wsdl:part element="tns:signInResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="SecurityServiceImpl">
+    <wsdl:operation name="signOut">
+      <wsdl:input message="tns:signOut" name="signOut"/>
+      <wsdl:output message="tns:signOutResponse" name="signOutResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getAuthToken">
+      <wsdl:input message="tns:getAuthToken" name="getAuthToken"/>
+      <wsdl:output message="tns:getAuthTokenResponse" name="getAuthTokenResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getUserDetails">
+      <wsdl:input message="tns:getUserDetails" name="getUserDetails"/>
+      <wsdl:output message="tns:getUserDetailsResponse" name="getUserDetailsResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="signIn">
+      <wsdl:input message="tns:signIn" name="signIn"/>
+      <wsdl:output message="tns:signInResponse" name="signInResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SecurityWebServiceSoapBinding" type="tns:SecurityServiceImpl">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="signOut">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="signOut">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="signOutResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAuthToken">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAuthToken">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAuthTokenResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getUserDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getUserDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="signIn">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="signIn">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="signInResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SecurityWebService">
+    <wsdl:port binding="tns:SecurityWebServiceSoapBinding" name="SecurityServiceImplPort">
+      <soap:address location="http://ecom-eom.safeway.com:80/services/SecuritySOAPService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://ecom-eom.safeway.com:80/services/SecuritySOAPService</con:endpoint></con:endpoints><con:operation id="74fe680c-c96f-425e-a051-71d2508a26b7" isOneWay="false" action="" name="getAuthToken" bindingOperationName="getAuthToken" type="Request-Response" outputName="getAuthTokenResponse" inputName="getAuthToken" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8c8d8371-56d2-4e47-aa0c-090537aa799c" name="eomadmin_req"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/SecuritySOAPService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://security.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sec:getAuthToken>\r
+         <!--Optional:-->\r
+         <arg0>eomadmin</arg0>\r
+         <!--Optional:-->\r
+         <arg1>Password1!</arg1>\r
+      </sec:getAuthToken>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://security.services.scope.manh.com/SecurityServiceImpl/getAuthToken"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="0778a472-67e9-457f-b9de-b0daff3b4e8b" isOneWay="false" action="" name="getUserDetails" bindingOperationName="getUserDetails" type="Request-Response" outputName="getUserDetailsResponse" inputName="getUserDetails" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="63db9147-6ba3-4ec3-818d-123133c09e7f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/SecuritySOAPService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://security.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sec:getUserDetails>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+         <!--Optional:-->\r
+         <arg1>?</arg1>\r
+      </sec:getUserDetails>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://security.services.scope.manh.com/SecurityServiceImpl/getUserDetails"/></con:call></con:operation><con:operation id="a67c432d-c0dc-4b5c-8bee-eaccfefc9405" isOneWay="false" action="" name="signIn" bindingOperationName="signIn" type="Request-Response" outputName="signInResponse" inputName="signIn" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3b17b982-5c70-409d-b2dd-f7f12f3ff311" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/SecuritySOAPService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://security.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sec:signIn>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+         <!--Optional:-->\r
+         <arg1>?</arg1>\r
+         <!--Optional:-->\r
+         <arg2>?</arg2>\r
+         <!--Optional:-->\r
+         <arg3>?</arg3>\r
+         <!--Optional:-->\r
+         <arg4>?</arg4>\r
+      </sec:signIn>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://security.services.scope.manh.com/SecurityServiceImpl/signIn"/></con:call></con:operation><con:operation id="6f50b290-cec1-4542-beff-c100423ab9b3" isOneWay="false" action="" name="signOut" bindingOperationName="signOut" type="Request-Response" outputName="signOutResponse" inputName="signOut" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4e98ed6d-6532-4e46-b454-6a7486480c46" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/SecuritySOAPService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://security.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sec:signOut>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+      </sec:signOut>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://security.services.scope.manh.com/SecurityServiceImpl/signOut"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="afd5f776-6539-459f-baa3-11bacf2b192c" wsaVersion="NONE" name="CustomerOrderWebServiceServiceSoapBinding" type="wsdl" bindingName="{http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/}CustomerOrderWebServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://ecom-eom.safeway.com/services/CustomerOrderWebService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://ecom-eom.safeway.com/services/CustomerOrderWebService?wsdl"><con:part><con:url>http://ecom-eom.safeway.com/services/CustomerOrderWebService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="CustomerOrderWebServiceService" targetNamespace="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="authorizeCreateCOPermission" type="tns:authorizeCreateCOPermission"/>
+      <xs:element name="authorizeCreateCOPermissionResponse" type="tns:authorizeCreateCOPermissionResponse"/>
+      <xs:element name="cancelOrderLines" type="tns:cancelOrderLines"/>
+      <xs:element name="cancelOrderLinesResponse" type="tns:cancelOrderLinesResponse"/>
+      <xs:element name="cancelOrderLinesWithLogin" type="tns:cancelOrderLinesWithLogin"/>
+      <xs:element name="cancelOrderLinesWithLoginResponse" type="tns:cancelOrderLinesWithLoginResponse"/>
+      <xs:element name="getCustomerOrderDetails" type="tns:getCustomerOrderDetails"/>
+      <xs:element name="getCustomerOrderDetailsResponse" type="tns:getCustomerOrderDetailsResponse"/>
+      <xs:element name="getCustomerOrderList" type="tns:getCustomerOrderList"/>
+      <xs:element name="getCustomerOrderListResponse" type="tns:getCustomerOrderListResponse"/>
+      <xs:element name="getFacilityLocatorSearchResultList" type="tns:getFacilityLocatorSearchResultList"/>
+      <xs:element name="getFacilityLocatorSearchResultListForMobile" type="tns:getFacilityLocatorSearchResultListForMobile"/>
+      <xs:element name="getFacilityLocatorSearchResultListForMobileResponse" type="tns:getFacilityLocatorSearchResultListForMobileResponse"/>
+      <xs:element name="getFacilityLocatorSearchResultListResponse" type="tns:getFacilityLocatorSearchResultListResponse"/>
+      <xs:element name="getFacilityLocatorSearchResultListWithLogin" type="tns:getFacilityLocatorSearchResultListWithLogin"/>
+      <xs:element name="getFacilityLocatorSearchResultListWithLoginResponse" type="tns:getFacilityLocatorSearchResultListWithLoginResponse"/>
+      <xs:element name="giftCardPaymentCheckBalance" type="tns:giftCardPaymentCheckBalance"/>
+      <xs:element name="giftCardPaymentCheckBalanceResponse" type="tns:giftCardPaymentCheckBalanceResponse"/>
+      <xs:element name="importCompletedCustomerOrder" type="tns:importCompletedCustomerOrder"/>
+      <xs:element name="importCompletedCustomerOrderResponse" type="tns:importCompletedCustomerOrderResponse"/>
+      <xs:element name="importCustomerOrder" type="tns:importCustomerOrder"/>
+      <xs:element name="importCustomerOrderForMobile" type="tns:importCustomerOrderForMobile"/>
+      <xs:element name="importCustomerOrderForMobileResponse" type="tns:importCustomerOrderForMobileResponse"/>
+      <xs:element name="importCustomerOrderResponse" type="tns:importCustomerOrderResponse"/>
+      <xs:element name="importCustomerOrderWithLogin" type="tns:importCustomerOrderWithLogin"/>
+      <xs:element name="importCustomerOrderWithLoginResponse" type="tns:importCustomerOrderWithLoginResponse"/>
+      <xs:element name="importPartialCustomerOrder" type="tns:importPartialCustomerOrder"/>
+      <xs:element name="importPartialCustomerOrderForMobile" type="tns:importPartialCustomerOrderForMobile"/>
+      <xs:element name="importPartialCustomerOrderForMobileResponse" type="tns:importPartialCustomerOrderForMobileResponse"/>
+      <xs:element name="importPartialCustomerOrderResponse" type="tns:importPartialCustomerOrderResponse"/>
+      <xs:element name="importPartialCustomerOrderWithLogin" type="tns:importPartialCustomerOrderWithLogin"/>
+      <xs:element name="importPartialCustomerOrderWithLoginResponse" type="tns:importPartialCustomerOrderWithLoginResponse"/>
+      <xs:complexType name="getCustomerOrderList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getCustomerOrderListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="importCompletedCustomerOrder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="importCompletedCustomerOrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="importCustomerOrderForMobile">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="importCustomerOrderForMobileResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="importPartialCustomerOrder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="importPartialCustomerOrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getFacilityLocatorSearchResultList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getFacilityLocatorSearchResultListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cancelOrderLines">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cancelOrderLinesResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="importCustomerOrderWithLogin">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="importCustomerOrderWithLoginResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="importPartialCustomerOrderWithLogin">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="importPartialCustomerOrderWithLoginResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getFacilityLocatorSearchResultListWithLogin">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getFacilityLocatorSearchResultListWithLoginResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="importPartialCustomerOrderForMobile">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="importPartialCustomerOrderForMobileResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="authorizeCreateCOPermission">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="authorizeCreateCOPermissionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="importCustomerOrder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="importCustomerOrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="giftCardPaymentCheckBalance">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="giftCardPaymentCheckBalanceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cancelOrderLinesWithLogin">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cancelOrderLinesWithLoginResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getFacilityLocatorSearchResultListForMobile">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getFacilityLocatorSearchResultListForMobileResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getCustomerOrderDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getCustomerOrderDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DOMCommManagerException" type="tns:DOMCommManagerException"/>
+      <xs:complexType name="DOMCommManagerException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Exception" type="tns:Exception"/>
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="JavalibCommManagerException" type="tns:JavalibCommManagerException"/>
+      <xs:complexType name="JavalibCommManagerException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getCustomerOrderList">
+    <wsdl:part element="tns:getCustomerOrderList" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getCustomerOrderListResponse">
+    <wsdl:part element="tns:getCustomerOrderListResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="importCompletedCustomerOrder">
+    <wsdl:part element="tns:importCompletedCustomerOrder" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="importCompletedCustomerOrderResponse">
+    <wsdl:part element="tns:importCompletedCustomerOrderResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="importCustomerOrderForMobile">
+    <wsdl:part element="tns:importCustomerOrderForMobile" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="importCustomerOrderForMobileResponse">
+    <wsdl:part element="tns:importCustomerOrderForMobileResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="importPartialCustomerOrder">
+    <wsdl:part element="tns:importPartialCustomerOrder" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="importPartialCustomerOrderResponse">
+    <wsdl:part element="tns:importPartialCustomerOrderResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getFacilityLocatorSearchResultList">
+    <wsdl:part element="tns:getFacilityLocatorSearchResultList" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getFacilityLocatorSearchResultListResponse">
+    <wsdl:part element="tns:getFacilityLocatorSearchResultListResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="cancelOrderLines">
+    <wsdl:part element="tns:cancelOrderLines" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="cancelOrderLinesResponse">
+    <wsdl:part element="tns:cancelOrderLinesResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="importCustomerOrderWithLogin">
+    <wsdl:part element="tns:importCustomerOrderWithLogin" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="importCustomerOrderWithLoginResponse">
+    <wsdl:part element="tns:importCustomerOrderWithLoginResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="importPartialCustomerOrderWithLogin">
+    <wsdl:part element="tns:importPartialCustomerOrderWithLogin" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="importPartialCustomerOrderWithLoginResponse">
+    <wsdl:part element="tns:importPartialCustomerOrderWithLoginResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getFacilityLocatorSearchResultListWithLogin">
+    <wsdl:part element="tns:getFacilityLocatorSearchResultListWithLogin" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getFacilityLocatorSearchResultListWithLoginResponse">
+    <wsdl:part element="tns:getFacilityLocatorSearchResultListWithLoginResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="importPartialCustomerOrderForMobile">
+    <wsdl:part element="tns:importPartialCustomerOrderForMobile" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="importPartialCustomerOrderForMobileResponse">
+    <wsdl:part element="tns:importPartialCustomerOrderForMobileResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="authorizeCreateCOPermission">
+    <wsdl:part element="tns:authorizeCreateCOPermission" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="authorizeCreateCOPermissionResponse">
+    <wsdl:part element="tns:authorizeCreateCOPermissionResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="JavalibCommManagerException">
+    <wsdl:part element="tns:JavalibCommManagerException" name="JavalibCommManagerException"/>
+  </wsdl:message>
+  <wsdl:message name="importCustomerOrder">
+    <wsdl:part element="tns:importCustomerOrder" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="importCustomerOrderResponse">
+    <wsdl:part element="tns:importCustomerOrderResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="giftCardPaymentCheckBalance">
+    <wsdl:part element="tns:giftCardPaymentCheckBalance" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="giftCardPaymentCheckBalanceResponse">
+    <wsdl:part element="tns:giftCardPaymentCheckBalanceResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="cancelOrderLinesWithLogin">
+    <wsdl:part element="tns:cancelOrderLinesWithLogin" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="cancelOrderLinesWithLoginResponse">
+    <wsdl:part element="tns:cancelOrderLinesWithLoginResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getFacilityLocatorSearchResultListForMobile">
+    <wsdl:part element="tns:getFacilityLocatorSearchResultListForMobile" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getFacilityLocatorSearchResultListForMobileResponse">
+    <wsdl:part element="tns:getFacilityLocatorSearchResultListForMobileResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="Exception">
+    <wsdl:part element="tns:Exception" name="Exception"/>
+  </wsdl:message>
+  <wsdl:message name="getCustomerOrderDetails">
+    <wsdl:part element="tns:getCustomerOrderDetails" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getCustomerOrderDetailsResponse">
+    <wsdl:part element="tns:getCustomerOrderDetailsResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="DOMCommManagerException">
+    <wsdl:part element="tns:DOMCommManagerException" name="DOMCommManagerException"/>
+  </wsdl:message>
+  <wsdl:portType name="CustomerOrderWebService">
+    <wsdl:operation name="getCustomerOrderList">
+      <wsdl:input message="tns:getCustomerOrderList" name="getCustomerOrderList"/>
+      <wsdl:output message="tns:getCustomerOrderListResponse" name="getCustomerOrderListResponse"/>
+      <wsdl:fault message="tns:DOMCommManagerException" name="DOMCommManagerException"/>
+    </wsdl:operation>
+    <wsdl:operation name="importCompletedCustomerOrder">
+      <wsdl:input message="tns:importCompletedCustomerOrder" name="importCompletedCustomerOrder"/>
+      <wsdl:output message="tns:importCompletedCustomerOrderResponse" name="importCompletedCustomerOrderResponse"/>
+      <wsdl:fault message="tns:Exception" name="Exception"/>
+    </wsdl:operation>
+    <wsdl:operation name="importCustomerOrderForMobile">
+      <wsdl:input message="tns:importCustomerOrderForMobile" name="importCustomerOrderForMobile"/>
+      <wsdl:output message="tns:importCustomerOrderForMobileResponse" name="importCustomerOrderForMobileResponse"/>
+      <wsdl:fault message="tns:Exception" name="Exception"/>
+    </wsdl:operation>
+    <wsdl:operation name="importPartialCustomerOrder">
+      <wsdl:input message="tns:importPartialCustomerOrder" name="importPartialCustomerOrder"/>
+      <wsdl:output message="tns:importPartialCustomerOrderResponse" name="importPartialCustomerOrderResponse"/>
+      <wsdl:fault message="tns:Exception" name="Exception"/>
+    </wsdl:operation>
+    <wsdl:operation name="getFacilityLocatorSearchResultList">
+      <wsdl:input message="tns:getFacilityLocatorSearchResultList" name="getFacilityLocatorSearchResultList"/>
+      <wsdl:output message="tns:getFacilityLocatorSearchResultListResponse" name="getFacilityLocatorSearchResultListResponse"/>
+      <wsdl:fault message="tns:Exception" name="Exception"/>
+    </wsdl:operation>
+    <wsdl:operation name="cancelOrderLines">
+      <wsdl:input message="tns:cancelOrderLines" name="cancelOrderLines"/>
+      <wsdl:output message="tns:cancelOrderLinesResponse" name="cancelOrderLinesResponse"/>
+      <wsdl:fault message="tns:Exception" name="Exception"/>
+    </wsdl:operation>
+    <wsdl:operation name="importCustomerOrderWithLogin">
+      <wsdl:input message="tns:importCustomerOrderWithLogin" name="importCustomerOrderWithLogin"/>
+      <wsdl:output message="tns:importCustomerOrderWithLoginResponse" name="importCustomerOrderWithLoginResponse"/>
+      <wsdl:fault message="tns:Exception" name="Exception"/>
+    </wsdl:operation>
+    <wsdl:operation name="importPartialCustomerOrderWithLogin">
+      <wsdl:input message="tns:importPartialCustomerOrderWithLogin" name="importPartialCustomerOrderWithLogin"/>
+      <wsdl:output message="tns:importPartialCustomerOrderWithLoginResponse" name="importPartialCustomerOrderWithLoginResponse"/>
+      <wsdl:fault message="tns:Exception" name="Exception"/>
+    </wsdl:operation>
+    <wsdl:operation name="getFacilityLocatorSearchResultListWithLogin">
+      <wsdl:input message="tns:getFacilityLocatorSearchResultListWithLogin" name="getFacilityLocatorSearchResultListWithLogin"/>
+      <wsdl:output message="tns:getFacilityLocatorSearchResultListWithLoginResponse" name="getFacilityLocatorSearchResultListWithLoginResponse"/>
+      <wsdl:fault message="tns:Exception" name="Exception"/>
+    </wsdl:operation>
+    <wsdl:operation name="importPartialCustomerOrderForMobile">
+      <wsdl:input message="tns:importPartialCustomerOrderForMobile" name="importPartialCustomerOrderForMobile"/>
+      <wsdl:output message="tns:importPartialCustomerOrderForMobileResponse" name="importPartialCustomerOrderForMobileResponse"/>
+      <wsdl:fault message="tns:Exception" name="Exception"/>
+    </wsdl:operation>
+    <wsdl:operation name="authorizeCreateCOPermission">
+      <wsdl:input message="tns:authorizeCreateCOPermission" name="authorizeCreateCOPermission"/>
+      <wsdl:output message="tns:authorizeCreateCOPermissionResponse" name="authorizeCreateCOPermissionResponse"/>
+      <wsdl:fault message="tns:JavalibCommManagerException" name="JavalibCommManagerException"/>
+    </wsdl:operation>
+    <wsdl:operation name="importCustomerOrder">
+      <wsdl:input message="tns:importCustomerOrder" name="importCustomerOrder"/>
+      <wsdl:output message="tns:importCustomerOrderResponse" name="importCustomerOrderResponse"/>
+      <wsdl:fault message="tns:Exception" name="Exception"/>
+    </wsdl:operation>
+    <wsdl:operation name="giftCardPaymentCheckBalance">
+      <wsdl:input message="tns:giftCardPaymentCheckBalance" name="giftCardPaymentCheckBalance"/>
+      <wsdl:output message="tns:giftCardPaymentCheckBalanceResponse" name="giftCardPaymentCheckBalanceResponse"/>
+      <wsdl:fault message="tns:Exception" name="Exception"/>
+    </wsdl:operation>
+    <wsdl:operation name="cancelOrderLinesWithLogin">
+      <wsdl:input message="tns:cancelOrderLinesWithLogin" name="cancelOrderLinesWithLogin"/>
+      <wsdl:output message="tns:cancelOrderLinesWithLoginResponse" name="cancelOrderLinesWithLoginResponse"/>
+      <wsdl:fault message="tns:Exception" name="Exception"/>
+    </wsdl:operation>
+    <wsdl:operation name="getFacilityLocatorSearchResultListForMobile">
+      <wsdl:input message="tns:getFacilityLocatorSearchResultListForMobile" name="getFacilityLocatorSearchResultListForMobile"/>
+      <wsdl:output message="tns:getFacilityLocatorSearchResultListForMobileResponse" name="getFacilityLocatorSearchResultListForMobileResponse"/>
+      <wsdl:fault message="tns:Exception" name="Exception"/>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerOrderDetails">
+      <wsdl:input message="tns:getCustomerOrderDetails" name="getCustomerOrderDetails"/>
+      <wsdl:output message="tns:getCustomerOrderDetailsResponse" name="getCustomerOrderDetailsResponse"/>
+      <wsdl:fault message="tns:DOMCommManagerException" name="DOMCommManagerException"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomerOrderWebServiceServiceSoapBinding" type="tns:CustomerOrderWebService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getCustomerOrderList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCustomerOrderList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCustomerOrderListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DOMCommManagerException">
+        <soap:fault name="DOMCommManagerException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="importCompletedCustomerOrder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="importCompletedCustomerOrder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="importCompletedCustomerOrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="importCustomerOrderForMobile">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="importCustomerOrderForMobile">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="importCustomerOrderForMobileResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="importPartialCustomerOrder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="importPartialCustomerOrder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="importPartialCustomerOrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getFacilityLocatorSearchResultList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getFacilityLocatorSearchResultList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getFacilityLocatorSearchResultListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="cancelOrderLines">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cancelOrderLines">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cancelOrderLinesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="importCustomerOrderWithLogin">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="importCustomerOrderWithLogin">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="importCustomerOrderWithLoginResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="importPartialCustomerOrderWithLogin">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="importPartialCustomerOrderWithLogin">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="importPartialCustomerOrderWithLoginResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getFacilityLocatorSearchResultListWithLogin">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getFacilityLocatorSearchResultListWithLogin">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getFacilityLocatorSearchResultListWithLoginResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="importPartialCustomerOrderForMobile">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="importPartialCustomerOrderForMobile">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="importPartialCustomerOrderForMobileResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="authorizeCreateCOPermission">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="authorizeCreateCOPermission">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="authorizeCreateCOPermissionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="JavalibCommManagerException">
+        <soap:fault name="JavalibCommManagerException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="importCustomerOrder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="importCustomerOrder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="importCustomerOrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="giftCardPaymentCheckBalance">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="giftCardPaymentCheckBalance">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="giftCardPaymentCheckBalanceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="cancelOrderLinesWithLogin">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cancelOrderLinesWithLogin">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cancelOrderLinesWithLoginResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getFacilityLocatorSearchResultListForMobile">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getFacilityLocatorSearchResultListForMobile">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getFacilityLocatorSearchResultListForMobileResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerOrderDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCustomerOrderDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCustomerOrderDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="DOMCommManagerException">
+        <soap:fault name="DOMCommManagerException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CustomerOrderWebServiceService">
+    <wsdl:port binding="tns:CustomerOrderWebServiceServiceSoapBinding" name="CustomerOrderWebServicePort">
+      <soap:address location="http://ecom-eom.safeway.com:80/services/CustomerOrderWebService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://ecom-eom.safeway.com:80/services/CustomerOrderWebService</con:endpoint></con:endpoints><con:operation id="3394660b-a2dd-498a-98e4-ce0ff8ce7a56" isOneWay="false" action="" name="authorizeCreateCOPermission" bindingOperationName="authorizeCreateCOPermission" type="Request-Response" outputName="authorizeCreateCOPermissionResponse" inputName="authorizeCreateCOPermission" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5bd360fb-be3f-450b-84e3-ca66111bf80d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/CustomerOrderWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <impl:authorizeCreateCOPermission>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+         <!--Optional:-->\r
+         <arg1>?</arg1>\r
+      </impl:authorizeCreateCOPermission>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/CustomerOrderWebService/authorizeCreateCOPermission"/></con:call></con:operation><con:operation id="67346d2f-1889-47e3-bce9-634ad327a392" isOneWay="false" action="" name="cancelOrderLines" bindingOperationName="cancelOrderLines" type="Request-Response" outputName="cancelOrderLinesResponse" inputName="cancelOrderLines" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b88ba205-548d-4636-b2a5-54ff7c3e2496" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/CustomerOrderWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <impl:cancelOrderLines>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+         <!--Optional:-->\r
+         <arg1>?</arg1>\r
+      </impl:cancelOrderLines>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/CustomerOrderWebService/cancelOrderLines"/></con:call></con:operation><con:operation id="5d3521d5-9500-4d70-a525-438c4b876b9b" isOneWay="false" action="" name="cancelOrderLinesWithLogin" bindingOperationName="cancelOrderLinesWithLogin" type="Request-Response" outputName="cancelOrderLinesWithLoginResponse" inputName="cancelOrderLinesWithLogin" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cea2828c-6bc4-4382-8b5e-950f66a20b5a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/CustomerOrderWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <impl:cancelOrderLinesWithLogin>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+         <!--Optional:-->\r
+         <arg1>?</arg1>\r
+         <!--Optional:-->\r
+         <arg2>?</arg2>\r
+      </impl:cancelOrderLinesWithLogin>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/CustomerOrderWebService/cancelOrderLinesWithLogin"/></con:call></con:operation><con:operation id="ef022cb3-6ef8-4894-af5c-6513ab59bd00" isOneWay="false" action="" name="getCustomerOrderDetails" bindingOperationName="getCustomerOrderDetails" type="Request-Response" outputName="getCustomerOrderDetailsResponse" inputName="getCustomerOrderDetails" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="080ef230-2faa-45c8-94be-791d68f95ea2" name="Customer_Order_Req"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/CustomerOrderWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <impl:getCustomerOrderDetails>\r
+         <!--Optional:-->\r
+         <arg0>5E67EAD157AE88F6C33D0A0F0259EA75492D6BBAEE1C832BBC2FCC9CE0BF141DAA543B70F3F9A9273F49970021C2A6D8BE1110B159664B32D57F95D76BB2B835D98455E9FA8F91DE693856D843E20A7C046EDDBCBB64150E9CAD03230949494C325C1C20D8E9B124ED197B580DACEE99</arg0>\r
+         <!--Optional:-->\r
+         <arg1><![CDATA[<tXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="getCustomerOrderDetailsinput.xsd">
+                                                  <Header>
+                                                    <Source>Source</Source>
+                                                    <Action_Type>update</Action_Type>
+                                                    <Message_Type>getCustomerOrder</Message_Type>
+                                                    <Company_ID>70</Company_ID>
+                                                  </Header>
+                                                  <Message>
+                                                    <EntityType>Customer Order</EntityType>
+                                                    <GetCustomerOrderDetails>                                        
+                                                      <OrderNumber>1188201</OrderNumber>
+                                                      <CustomerInfo/>
+                                                    </GetCustomerOrderDetails>
+                                                  </Message>
+                                                </tXML>
+                                                ]]]]>><![CDATA[</arg1>
+      </impl:getCustomerOrderDetails>
+   </soapenv:Body>
+</soapenv:Envelope> 
+</arg1>\r
+      </impl:getCustomerOrderDetails>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/CustomerOrderWebService/getCustomerOrderDetails"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="b68ea4bf-7a42-4e72-a97a-0b9b5acb912a" isOneWay="false" action="" name="getCustomerOrderList" bindingOperationName="getCustomerOrderList" type="Request-Response" outputName="getCustomerOrderListResponse" inputName="getCustomerOrderList" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="42df69fd-a93a-46f5-b1f2-9aff75798d8d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/CustomerOrderWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <impl:getCustomerOrderList>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+         <!--Optional:-->\r
+         <arg1>?</arg1>\r
+      </impl:getCustomerOrderList>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/CustomerOrderWebService/getCustomerOrderList"/></con:call></con:operation><con:operation id="f308f133-1738-4387-984a-dce6fd118653" isOneWay="false" action="" name="getFacilityLocatorSearchResultList" bindingOperationName="getFacilityLocatorSearchResultList" type="Request-Response" outputName="getFacilityLocatorSearchResultListResponse" inputName="getFacilityLocatorSearchResultList" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="21690f37-6468-4977-88d0-c6db393ac708" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/CustomerOrderWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <impl:getFacilityLocatorSearchResultList>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+         <!--Optional:-->\r
+         <arg1>?</arg1>\r
+      </impl:getFacilityLocatorSearchResultList>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/CustomerOrderWebService/getFacilityLocatorSearchResultList"/></con:call></con:operation><con:operation id="4eeb64ee-e025-4ca1-9047-f04fabb04532" isOneWay="false" action="" name="getFacilityLocatorSearchResultListForMobile" bindingOperationName="getFacilityLocatorSearchResultListForMobile" type="Request-Response" outputName="getFacilityLocatorSearchResultListForMobileResponse" inputName="getFacilityLocatorSearchResultListForMobile" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="69ee3f88-f377-4c34-ad58-d492c5a8de8e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/CustomerOrderWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <impl:getFacilityLocatorSearchResultListForMobile>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+      </impl:getFacilityLocatorSearchResultListForMobile>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/CustomerOrderWebService/getFacilityLocatorSearchResultListForMobile"/></con:call></con:operation><con:operation id="671d0602-d6d7-4b63-8ff8-b684588f56b7" isOneWay="false" action="" name="getFacilityLocatorSearchResultListWithLogin" bindingOperationName="getFacilityLocatorSearchResultListWithLogin" type="Request-Response" outputName="getFacilityLocatorSearchResultListWithLoginResponse" inputName="getFacilityLocatorSearchResultListWithLogin" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d90681cd-dca5-4ae4-ba0f-e3373d470649" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/CustomerOrderWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <impl:getFacilityLocatorSearchResultListWithLogin>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+         <!--Optional:-->\r
+         <arg1>?</arg1>\r
+         <!--Optional:-->\r
+         <arg2>?</arg2>\r
+      </impl:getFacilityLocatorSearchResultListWithLogin>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/CustomerOrderWebService/getFacilityLocatorSearchResultListWithLogin"/></con:call></con:operation><con:operation id="f600ee49-003b-4b72-ae29-e7a20947192e" isOneWay="false" action="" name="giftCardPaymentCheckBalance" bindingOperationName="giftCardPaymentCheckBalance" type="Request-Response" outputName="giftCardPaymentCheckBalanceResponse" inputName="giftCardPaymentCheckBalance" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="549aa997-5f60-41d6-b6f0-bc9681eaf8e3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/CustomerOrderWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <impl:giftCardPaymentCheckBalance>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+         <!--Optional:-->\r
+         <arg1>?</arg1>\r
+      </impl:giftCardPaymentCheckBalance>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/CustomerOrderWebService/giftCardPaymentCheckBalance"/></con:call></con:operation><con:operation id="438d6284-4ced-44cd-8d63-cf82eef87248" isOneWay="false" action="" name="importCompletedCustomerOrder" bindingOperationName="importCompletedCustomerOrder" type="Request-Response" outputName="importCompletedCustomerOrderResponse" inputName="importCompletedCustomerOrder" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9d564dbe-fffe-464b-af24-0e06ac8e4be9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/CustomerOrderWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <impl:importCompletedCustomerOrder>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+         <!--Optional:-->\r
+         <arg1>?</arg1>\r
+      </impl:importCompletedCustomerOrder>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/CustomerOrderWebService/importCompletedCustomerOrder"/></con:call></con:operation><con:operation id="8222b9be-5949-4b2e-9e40-1008b2781828" isOneWay="false" action="" name="importCustomerOrder" bindingOperationName="importCustomerOrder" type="Request-Response" outputName="importCustomerOrderResponse" inputName="importCustomerOrder" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="58eaefba-b315-4a95-8f78-4b53c81a1073" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/CustomerOrderWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <impl:importCustomerOrder>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+         <!--Optional:-->\r
+         <arg1>?</arg1>\r
+      </impl:importCustomerOrder>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/CustomerOrderWebService/importCustomerOrder"/></con:call></con:operation><con:operation id="8b071e49-f146-44c8-a1be-8e35f028f1da" isOneWay="false" action="" name="importCustomerOrderForMobile" bindingOperationName="importCustomerOrderForMobile" type="Request-Response" outputName="importCustomerOrderForMobileResponse" inputName="importCustomerOrderForMobile" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="663d967b-8afe-4271-bdeb-91ec1ea7f593" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/CustomerOrderWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <impl:importCustomerOrderForMobile>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+      </impl:importCustomerOrderForMobile>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/CustomerOrderWebService/importCustomerOrderForMobile"/></con:call></con:operation><con:operation id="97b36b68-3587-4a4a-9ef5-5a3b2b86c200" isOneWay="false" action="" name="importCustomerOrderWithLogin" bindingOperationName="importCustomerOrderWithLogin" type="Request-Response" outputName="importCustomerOrderWithLoginResponse" inputName="importCustomerOrderWithLogin" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0f2da961-0d4b-4275-9cbf-ffe193ecb1a8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/CustomerOrderWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <impl:importCustomerOrderWithLogin>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+         <!--Optional:-->\r
+         <arg1>?</arg1>\r
+         <!--Optional:-->\r
+         <arg2>?</arg2>\r
+      </impl:importCustomerOrderWithLogin>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/CustomerOrderWebService/importCustomerOrderWithLogin"/></con:call></con:operation><con:operation id="216ce871-ff15-4b0c-b782-fffdee201291" isOneWay="false" action="" name="importPartialCustomerOrder" bindingOperationName="importPartialCustomerOrder" type="Request-Response" outputName="importPartialCustomerOrderResponse" inputName="importPartialCustomerOrder" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f95cfe0f-2721-46e1-b681-531638718f6b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/CustomerOrderWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <impl:importPartialCustomerOrder>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+         <!--Optional:-->\r
+         <arg1>?</arg1>\r
+      </impl:importPartialCustomerOrder>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/CustomerOrderWebService/importPartialCustomerOrder"/></con:call></con:operation><con:operation id="d73638b4-7607-4fc8-bbf6-5ed25866f882" isOneWay="false" action="" name="importPartialCustomerOrderForMobile" bindingOperationName="importPartialCustomerOrderForMobile" type="Request-Response" outputName="importPartialCustomerOrderForMobileResponse" inputName="importPartialCustomerOrderForMobile" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6e22a9f0-0b4e-4e32-853b-fb2ba613d3ef" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/CustomerOrderWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <impl:importPartialCustomerOrderForMobile>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+      </impl:importPartialCustomerOrderForMobile>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/CustomerOrderWebService/importPartialCustomerOrderForMobile"/></con:call></con:operation><con:operation id="7bad4e2d-5240-49fa-b9ee-c41b4e76735b" isOneWay="false" action="" name="importPartialCustomerOrderWithLogin" bindingOperationName="importPartialCustomerOrderWithLogin" type="Request-Response" outputName="importPartialCustomerOrderWithLoginResponse" inputName="importPartialCustomerOrderWithLogin" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="90a84b94-d05b-4d62-a838-68e731e76ab0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://ecom-eom.safeway.com:80/services/CustomerOrderWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <impl:importPartialCustomerOrderWithLogin>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+         <!--Optional:-->\r
+         <arg1>?</arg1>\r
+         <!--Optional:-->\r
+         <arg2>?</arg2>\r
+      </impl:importPartialCustomerOrderWithLogin>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/CustomerOrderWebService/importPartialCustomerOrderWithLogin"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

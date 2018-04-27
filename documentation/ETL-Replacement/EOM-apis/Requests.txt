@@ -1,0 +1,44 @@
+http://ecom-eom.safeway.com/services/SecuritySOAPService?wsdl 
+http://ecom-eom.safeway.com/services/CustomerOrderWebService?wsdl 
+
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://security.services.scope.manh.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sec:getAuthToken>
+         <!--Optional:-->
+         <arg0>eomadmin</arg0>
+         <!--Optional:-->
+         <arg1>Password1!</arg1>
+      </sec:getAuthToken>
+   </soapenv:Body>
+</soapenv:Envelope> 
+
+
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.ejb.customerordermanager.sellingservice.services.scope.manh.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <impl:getCustomerOrderDetails>
+         <!--Optional:-->
+         <arg0>E23C0167FA90BD27091BE45F42C7BA0058B8445E8113063ACE4E9D36B634E9C4AA543B70F3F9A9273F49970021C2A6D8F1C7704B26B7F07A40A02027F17EC41584150BBC3B2464B670B16FC496E4ED47046EDDBCBB64150E9CAD03230949494C325C1C20D8E9B124ED197B580DACEE99</arg0>
+         <!--Optional:-->
+         <arg1><![CDATA[<tXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="get Customer Order Details input.xsd">
+                                                  <Header>
+                                                    <Source>Source</Source>
+                                                    <Action_Type>update</Action_Type>
+                                                    <Message_Type>getCustomerOrder</Message_Type>
+                                                    <Company_ID>70</Company_ID>
+                                                  </Header>
+                                                  <Message>
+                                                    <EntityType>Customer Order</EntityType>
+                                                    <GetCustomerOrderDetails>                                        
+                                                      <OrderNumber>8092016001</OrderNumber>
+                                                      <CustomerInfo/>
+                                                    </GetCustomerOrderDetails>
+                                                  </Message>
+                                                </tXML>
+                                                ]]></arg1>
+      </impl:getCustomerOrderDetails>
+   </soapenv:Body>
+</soapenv:Envelope>

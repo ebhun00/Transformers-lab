@@ -1,0 +1,11 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://security.services.scope.manh.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sec:getAuthToken>
+         <!--Optional:-->
+         <arg0>eomadmin</arg0>
+         <!--Optional:-->
+         <arg1>Password1!</arg1>
+      </sec:getAuthToken>
+   </soapenv:Body>
+</soapenv:Envelope>

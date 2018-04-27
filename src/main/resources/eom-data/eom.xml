@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tXML>
+   <Header>
+      <Source>DOM</Source>
+      <Action_Type>Update</Action_Type>
+      <Sequence_Number />
+      <Batch_ID />
+      <Reference_ID>1387462</Reference_ID>
+      <User_ID />
+      <Password />
+      <Message_Type>Customer Order</Message_Type>
+      <Company_ID>70</Company_ID>
+      <Msg_Locale>English (United States)</Msg_Locale>
+      <Msg_Time_Zone>US/Mountain</Msg_Time_Zone>
+      <Version>0</Version>
+   </Header>
+   <Message>
+      <Order>
+         <OrderNumber>1387462</OrderNumber>
+         <OrderCreatedDate>4/23/18 00:18 MDT</OrderCreatedDate>
+         <OrderCaptureDate>4/23/18 00:18 MDT</OrderCaptureDate>
+         <ExternalOrderNumber>1387462</ExternalOrderNumber>
+         <OrderSubtotal>30.11</OrderSubtotal>
+         <OrderTotal>34.06</OrderTotal>
+         <Site />
+         <OrderCurrency>USD</OrderCurrency>
+         <OrderCurrencySymbol>$</OrderCurrencySymbol>
+         <EnteredBy>ecommerce</EnteredBy>
+         <EnteredLocation>2979</EnteredLocation>
+         <EntryType>Web</EntryType>
+         <Confirmed>false</Confirmed>
+         <BillingMethodCode>Prepaid</BillingMethodCode>
+         <OnHold>false</OnHold>
+         <MinimizeShipments>false</MinimizeShipments>
+         <NbrOfPackingSlipsToPrint />
+         <OrderType>RG</OrderType>
+         <ReasonCode />
+         <PaymentStatus>AWAIT_AUTHORIZATION</PaymentStatus>
+         <OrderStatus>Allocated</OrderStatus>
+         <OrderEvent />
+         <LastUpdatedDTTM>4/23/18 00:18 MDT</LastUpdatedDTTM>
+         <OriginalOrderID />
+         <CustomerInfo>
+            <CustomerId>18665522</CustomerId>
+            <CustomerUserId />
+            <CustomerFirstName>shelly</CustomerFirstName>
+            <CustomerLastName>berg 9</CustomerLastName>
+            <CustomerPhone>5614034690</CustomerPhone>
+            <CustomerEmail>shellyberg03@gmail.com</CustomerEmail>
+            <CustomerType />
+         </CustomerInfo>
+         <PaymentDetails>
+            <PaymentDetail>
+               <ExternalPaymentDetailId>176001011</ExternalPaymentDetailId>
+               <PaymentMethod>Credit Card</PaymentMethod>
+               <PaymentOrigin />
+               <CardType>Master Card</CardType>
+               <IsSuspended>false</IsSuspended>
+               <AccountNumber>1842640879911455</AccountNumber>
+               <AccountDisplayNumber />
+               <NameAsOnCard />
+               <CardExpiryMonth>4</CardExpiryMonth>
+               <CardExpiryYear>2020</CardExpiryYear>
+               <SecurityCode />
+               <AccountType />
+               <RoutingTransitNumber />
+               <RoutingDisplayNumber />
+               <CheckNumber />
+               <PaymentEntryType>Retail</PaymentEntryType>
+               <DriversLicenseNumber />
+               <DriversLicenseState />
+               <DriversLicenseCountry />
+               <BusinessName />
+               <BusinessTaxID />
+               <ReqAuthorizationAmount>34.06</ReqAuthorizationAmount>
+               <ReqSettlementAmount>0.00</ReqSettlementAmount>
+               <ReqRefundAmount>0.00</ReqRefundAmount>
+               <CurrencyCode>USD</CurrencyCode>
+               <ChargeSequence>1</ChargeSequence>
+               <OrigEntityNumber />
+               <ReferenceFields>
+                  <ReferenceField1>back of bldg to second patio door, call 561 403-4690, no texts. double bag.  nothing too heavy.  double bags and not a lot in each bag</ReferenceField1>
+                  <ReferenceField2 />
+                  <ReferenceField3 />
+                  <ReferenceField4>39.4706</ReferenceField4>
+                  <ReferenceField5>-76.6067</ReferenceField5>
+                  <ReferenceField6>49123213523</ReferenceField6>
+                  <ReferenceField7>2979</ReferenceField7>
+                  <ReferenceField8>18665522</ReferenceField8>
+                  <ReferenceField9 />
+                  <ReferenceField10 />
+                  <ReferenceNumber1 />
+                  <ReferenceNumber2 />
+                  <ReferenceNumber3 />
+                  <ReferenceNumber4 />
+                  <ReferenceNumber5 />
+               </ReferenceFields>
+               <BillToDetail>
+                  <BillToFirstName>shelly</BillToFirstName>
+                  <BillToLastName>berg 9</BillToLastName>
+                  <BillToAddressLine1>4 Queensbridge Ct</BillToAddressLine1>
+                  <BillToAddressLine2 />
+                  <BillToAddressLine3 />
+                  <BillToCity>Cockeysville</BillToCity>
+                  <BillToState>MD</BillToState>
+                  <BillToPostalCode>21030</BillToPostalCode>
+                  <BillToCountry>US</BillToCountry>
+                  <BillToPhone>5614034690</BillToPhone>
+                  <BillToEmail>shellyberg03@gmail.com</BillToEmail>
+               </BillToDetail>
+            </PaymentDetail>
+         </PaymentDetails>
+         <ChargeDetails>
+            <ChargeDetail>
+               <ExtChargeDetailId>0000000022155</ExtChargeDetailId>
+               <ChargeCategory>Shipping</ChargeCategory>
+               <ChargeName>Delivery Charge</ChargeName>
+               <ChargeAmount>3.95</ChargeAmount>
+               <UnitCharge>0</UnitCharge>
+               <TaxIncluded>false</TaxIncluded>
+               <OriginalChargeAmount>3.9500</OriginalChargeAmount>
+               <MarkForDeletion>false</MarkForDeletion>
+               <IsOverridden>false</IsOverridden>
+               <OverrideReason />
+            </ChargeDetail>
+         </ChargeDetails>
+         <TaxDetails />
+         <DiscountDetails>
+            <DiscountDetail>
+               <ExtDiscountDetailId>2</ExtDiscountDetailId>
+               <ExtDiscountId>0000000010872</ExtDiscountId>
+               <DiscountType>Others</DiscountType>
+               <DiscountValue />
+               <DiscountAmount>0.00</DiscountAmount>
+               <DiscountStatus>Applied</DiscountStatus>
+               <MarkForDeletion>false</MarkForDeletion>
+               <ReasonCode />
+               <Comments />
+            </DiscountDetail>
+            <DiscountDetail>
+               <ExtDiscountDetailId>1</ExtDiscountDetailId>
+               <ExtDiscountId>0000000010971</ExtDiscountId>
+               <DiscountType>Others</DiscountType>
+               <DiscountValue />
+               <DiscountAmount>0.00</DiscountAmount>
+               <DiscountStatus>Applied</DiscountStatus>
+               <MarkForDeletion>false</MarkForDeletion>
+               <ReasonCode />
+               <Comments />
+            </DiscountDetail>
+         </DiscountDetails>
+         <Notes />
+         <WMNotes />
+         <ReferenceFields>
+            <ReferenceField1 />
+            <ReferenceField2 />
+            <ReferenceField3 />
+            <ReferenceField4 />
+            <ReferenceField5 />
+            <ReferenceField6 />
+            <ReferenceField7 />
+            <ReferenceField8 />
+            <ReferenceField9 />
+            <ReferenceField10 />
+            <ReferenceNumber1>3</ReferenceNumber1>
+            <ReferenceNumber2>0</ReferenceNumber2>
+            <ReferenceNumber3>1</ReferenceNumber3>
+            <ReferenceNumber4>0</ReferenceNumber4>
+            <ReferenceNumber5>2</ReferenceNumber5>
+         </ReferenceFields>
+         <CustomFieldList />
+         <WMProcessInfo />
+         <OrderLines>
+            <OrderLine>
+               <LineNumber>148011117</LineNumber>
+               <ExternalLineID>148011117</ExternalLineID>
+               <OrderLineCreatedDate>4/23/18 00:18 MDT</OrderLineCreatedDate>
+               <OrderLineCaptureDate>4/23/18 00:18 MDT</OrderLineCaptureDate>
+               <ParentOrderLineNumber />
+               <OrderLineStatus>Allocated</OrderLineStatus>
+               <LineType />
+               <ItemID>148011117</ItemID>
+               <ItemDescription>MICHAEL ANGELOS EGGPLANT PARMESAN</ItemDescription>
+               <ExternalItemID />
+               <MerchGroup />
+               <MerchType>0</MerchType>
+               <IsGift>false</IsGift>
+               <LineTotal>14.36</LineTotal>
+               <OnHold>false</OnHold>
+               <ReasonCode />
+               <MergeFacility />
+               <IsReturnable>true</IsReturnable>
+               <GiftCardValue />
+               <LastUpdatedDTTM>4/23/18 00:18 MDT</LastUpdatedDTTM>
+               <PriceInfo>
+                  <RefundPrice />
+                  <Price>3.59</Price>
+                  <ExtendedPrice>14.36</ExtendedPrice>
+                  <PurchasePrice />
+                  <IsPriceOverridden>false</IsPriceOverridden>
+                  <OriginalPrice />
+                  <OverrideReason />
+               </PriceInfo>
+               <Quantity>
+                  <OrderedQty>4</OrderedQty>
+                  <OrderedQtyUOM>unit</OrderedQtyUOM>
+                  <CancelledQty>0</CancelledQty>
+                  <TotalAllocatedQty>4</TotalAllocatedQty>
+                  <TotalCancelledQty>0</TotalCancelledQty>
+               </Quantity>
+               <ShippingInfo>
+                  <MustDeliverBy>4/23/18 20:00 EDT</MustDeliverBy>
+                  <PromisedDeliveryBy>4/23/18 16:01 EDT</PromisedDeliveryBy>
+                  <RequestedDeliveryBy>4/23/18 16:01 EDT</RequestedDeliveryBy>
+                  <ShipVia>A1</ShipVia>
+                  <DesignatedCarrierCode>SFWY</DesignatedCarrierCode>
+                  <DesignatedModeCode>LTL</DesignatedModeCode>
+                  <DesignatedServiceLevelCode>A1</DesignatedServiceLevelCode>
+                  <ShipToFacility />
+                  <DeliveryOption>Ship to address</DeliveryOption>
+                  <ShippingAddress>
+                     <ShipToFirstName>shelly</ShipToFirstName>
+                     <ShipToLastName>berg 9</ShipToLastName>
+                     <ShipToAddressLine1>4 Queensbridge Ct</ShipToAddressLine1>
+                     <ShipToAddressLine2 />
+                     <ShipToAddressLine3 />
+                     <ShipToCity>Cockeysville</ShipToCity>
+                     <ShipToState>MD</ShipToState>
+                     <ShipToPostalCode>21030</ShipToPostalCode>
+                     <ShipToCounty />
+                     <ShipToCountry>US</ShipToCountry>
+                     <ShipToPhone>5614034690</ShipToPhone>
+                     <ShipToEmail>shellyberg03@gmail.com</ShipToEmail>
+                     <ShipToFax />
+                  </ShippingAddress>
+               </ShippingInfo>
+               <DiscountDetails />
+               <ChargeDetails />
+               <TaxDetails />
+               <Notes />
+               <WMNotes>
+                  <WMNote>
+                     <NoteType>UC</NoteType>
+                     <NoteSeq>1</NoteSeq>
+                     <NoteCode />
+                     <Visibility>0</Visibility>
+                     <CommentText>double bag these 4 separately!</CommentText>
+                  </WMNote>
+               </WMNotes>
+               <LineReferenceFields>
+                  <ReferenceField1>0</ReferenceField1>
+                  <ReferenceField2>0</ReferenceField2>
+                  <ReferenceField3>3.9500000476837158</ReferenceField3>
+                  <ReferenceField4>4</ReferenceField4>
+                  <ReferenceField5 />
+                  <ReferenceField6 />
+                  <ReferenceField7 />
+                  <ReferenceField8 />
+                  <ReferenceField9>FZ</ReferenceField9>
+                  <ReferenceField10>29728868</ReferenceField10>
+                  <ReferenceNumber1 />
+                  <ReferenceNumber2 />
+                  <ReferenceNumber3 />
+                  <ReferenceNumber4 />
+                  <ReferenceNumber5 />
+               </LineReferenceFields>
+               <CustomFieldList />
+               <LineWMProcessInfo />
+               <SKUAttributes>
+                  <InventoryType />
+                  <ProductStatus />
+                  <BatchNumber />
+                  <SKUAttribute1 />
+                  <SKUAttribute2 />
+                  <SKUAttribute3 />
+                  <SKUAttribute4 />
+                  <SKUAttribute5 />
+                  <CountryOfOrigin />
+               </SKUAttributes>
+               <Extension>
+                  <SegmentID />
+               </Extension>
+               <AllocationDetails>
+                  <AllocationDetail>
+                     <ItemID>148011117</ItemID>
+                     <AllocatedQuantity>4</AllocatedQuantity>
+                     <AllocatedQtyUOM>unit</AllocatedQtyUOM>
+                     <SupplyType>OH</SupplyType>
+                     <SupplyID />
+                     <SupplyDetailID />
+                     <IsVirtualAllocation>true</IsVirtualAllocation>
+                     <SubstitutionRatio>1</SubstitutionRatio>
+                     <TierId>Default</TierId>
+                     <OriginFacilityAliasID>2979</OriginFacilityAliasID>
+                     <FacilityType>CS</FacilityType>
+                     <CommittedShipDTTM>4/23/18 02:18 EDT</CommittedShipDTTM>
+                     <CommittedDeliveryDTTM>4/23/18 03:18 EDT</CommittedDeliveryDTTM>
+                     <MustReleaseByDTTM>4/23/18 15:01 EDT</MustReleaseByDTTM>
+                     <MustShipByDTTM>4/23/18 15:01 EDT</MustShipByDTTM>
+                     <CreatedDTTM>4/23/18 00:18 MDT</CreatedDTTM>
+                     <ModifiedDTTM>4/23/18 00:18 MDT</ModifiedDTTM>
+                     <AllocationStatus>OPEN</AllocationStatus>
+                     <SubstitutionType />
+                     <InventorySegmentName />
+                     <RequiredCapacityPerUnit />
+                  </AllocationDetail>
+               </AllocationDetails>
+               <SplitLines />
+            </OrderLine>
+            <OrderLine>
+               <LineNumber>125300053</LineNumber>
+               <ExternalLineID>125300053</ExternalLineID>
+               <OrderLineCreatedDate>4/23/18 00:18 MDT</OrderLineCreatedDate>
+               <OrderLineCaptureDate>4/23/18 00:18 MDT</OrderLineCaptureDate>
+               <ParentOrderLineNumber />
+               <OrderLineStatus>Allocated</OrderLineStatus>
+               <LineType />
+               <ItemID>125300053</ItemID>
+               <ItemDescription>PROGRESSO RTS SOUP CHICKEN NOODLE TRAD</ItemDescription>
+               <ExternalItemID />
+               <MerchGroup />
+               <MerchType>0</MerchType>
+               <IsGift>false</IsGift>
+               <LineTotal>3.75</LineTotal>
+               <OnHold>false</OnHold>
+               <ReasonCode />
+               <MergeFacility />
+               <IsReturnable>true</IsReturnable>
+               <GiftCardValue />
+               <LastUpdatedDTTM>4/23/18 00:18 MDT</LastUpdatedDTTM>
+               <PriceInfo>
+                  <RefundPrice />
+                  <Price>1.25</Price>
+                  <ExtendedPrice>3.75</ExtendedPrice>
+                  <PurchasePrice />
+                  <IsPriceOverridden>false</IsPriceOverridden>
+                  <OriginalPrice />
+                  <OverrideReason />
+               </PriceInfo>
+               <Quantity>
+                  <OrderedQty>3</OrderedQty>
+                  <OrderedQtyUOM>unit</OrderedQtyUOM>
+                  <CancelledQty>0</CancelledQty>
+                  <TotalAllocatedQty>3</TotalAllocatedQty>
+                  <TotalCancelledQty>0</TotalCancelledQty>
+               </Quantity>
+               <ShippingInfo>
+                  <MustDeliverBy>4/23/18 20:00 EDT</MustDeliverBy>
+                  <PromisedDeliveryBy>4/23/18 16:01 EDT</PromisedDeliveryBy>
+                  <RequestedDeliveryBy>4/23/18 16:01 EDT</RequestedDeliveryBy>
+                  <ShipVia>A1</ShipVia>
+                  <DesignatedCarrierCode>SFWY</DesignatedCarrierCode>
+                  <DesignatedModeCode>LTL</DesignatedModeCode>
+                  <DesignatedServiceLevelCode>A1</DesignatedServiceLevelCode>
+                  <ShipToFacility />
+                  <DeliveryOption>Ship to address</DeliveryOption>
+                  <ShippingAddress>
+                     <ShipToFirstName>shelly</ShipToFirstName>
+                     <ShipToLastName>berg 9</ShipToLastName>
+                     <ShipToAddressLine1>4 Queensbridge Ct</ShipToAddressLine1>
+                     <ShipToAddressLine2 />
+                     <ShipToAddressLine3 />
+                     <ShipToCity>Cockeysville</ShipToCity>
+                     <ShipToState>MD</ShipToState>
+                     <ShipToPostalCode>21030</ShipToPostalCode>
+                     <ShipToCounty />
+                     <ShipToCountry>US</ShipToCountry>
+                     <ShipToPhone>5614034690</ShipToPhone>
+                     <ShipToEmail>shellyberg03@gmail.com</ShipToEmail>
+                     <ShipToFax />
+                  </ShippingAddress>
+               </ShippingInfo>
+               <DiscountDetails />
+               <ChargeDetails />
+               <TaxDetails />
+               <Notes />
+               <WMNotes>
+                  <WMNote>
+                     <NoteType>UC</NoteType>
+                     <NoteSeq>1</NoteSeq>
+                     <NoteCode />
+                     <Visibility>0</Visibility>
+                     <CommentText>double bag soup sparately</CommentText>
+                  </WMNote>
+               </WMNotes>
+               <LineReferenceFields>
+                  <ReferenceField1>0</ReferenceField1>
+                  <ReferenceField2>0</ReferenceField2>
+                  <ReferenceField3>3.9500000476837158</ReferenceField3>
+                  <ReferenceField4>3</ReferenceField4>
+                  <ReferenceField5 />
+                  <ReferenceField6 />
+                  <ReferenceField7 />
+                  <ReferenceField8 />
+                  <ReferenceField9>AM</ReferenceField9>
+                  <ReferenceField10>29728870</ReferenceField10>
+                  <ReferenceNumber1 />
+                  <ReferenceNumber2 />
+                  <ReferenceNumber3 />
+                  <ReferenceNumber4 />
+                  <ReferenceNumber5 />
+               </LineReferenceFields>
+               <CustomFieldList />
+               <LineWMProcessInfo />
+               <SKUAttributes>
+                  <InventoryType />
+                  <ProductStatus />
+                  <BatchNumber />
+                  <SKUAttribute1 />
+                  <SKUAttribute2 />
+                  <SKUAttribute3 />
+                  <SKUAttribute4 />
+                  <SKUAttribute5 />
+                  <CountryOfOrigin />
+               </SKUAttributes>
+               <Extension>
+                  <SegmentID />
+               </Extension>
+               <AllocationDetails>
+                  <AllocationDetail>
+                     <ItemID>125300053</ItemID>
+                     <AllocatedQuantity>3</AllocatedQuantity>
+                     <AllocatedQtyUOM>unit</AllocatedQtyUOM>
+                     <SupplyType>OH</SupplyType>
+                     <SupplyID />
+                     <SupplyDetailID />
+                     <IsVirtualAllocation>true</IsVirtualAllocation>
+                     <SubstitutionRatio>1</SubstitutionRatio>
+                     <TierId>Default</TierId>
+                     <OriginFacilityAliasID>2979</OriginFacilityAliasID>
+                     <FacilityType>CS</FacilityType>
+                     <CommittedShipDTTM>4/23/18 02:18 EDT</CommittedShipDTTM>
+                     <CommittedDeliveryDTTM>4/23/18 03:18 EDT</CommittedDeliveryDTTM>
+                     <MustReleaseByDTTM>4/23/18 15:01 EDT</MustReleaseByDTTM>
+                     <MustShipByDTTM>4/23/18 15:01 EDT</MustShipByDTTM>
+                     <CreatedDTTM>4/23/18 00:18 MDT</CreatedDTTM>
+                     <ModifiedDTTM>4/23/18 00:18 MDT</ModifiedDTTM>
+                     <AllocationStatus>OPEN</AllocationStatus>
+                     <SubstitutionType />
+                     <InventorySegmentName />
+                     <RequiredCapacityPerUnit />
+                  </AllocationDetail>
+               </AllocationDetails>
+               <SplitLines />
+            </OrderLine>
+            <OrderLine>
+               <LineNumber>960277392</LineNumber>
+               <ExternalLineID>960277392</ExternalLineID>
+               <OrderLineCreatedDate>4/23/18 00:18 MDT</OrderLineCreatedDate>
+               <OrderLineCaptureDate>4/23/18 00:18 MDT</OrderLineCaptureDate>
+               <ParentOrderLineNumber />
+               <OrderLineStatus>Allocated</OrderLineStatus>
+               <LineType />
+               <ItemID>960277392</ItemID>
+               <ItemDescription>VIVA VANTAGE TOWELS BR CHOOSE-A-SHEET</ItemDescription>
+               <ExternalItemID />
+               <MerchGroup />
+               <MerchType>0</MerchType>
+               <IsGift>false</IsGift>
+               <LineTotal>12</LineTotal>
+               <OnHold>false</OnHold>
+               <ReasonCode />
+               <MergeFacility />
+               <IsReturnable>true</IsReturnable>
+               <GiftCardValue />
+               <LastUpdatedDTTM>4/23/18 00:18 MDT</LastUpdatedDTTM>
+               <PriceInfo>
+                  <RefundPrice />
+                  <Price>6</Price>
+                  <ExtendedPrice>12</ExtendedPrice>
+                  <PurchasePrice />
+                  <IsPriceOverridden>false</IsPriceOverridden>
+                  <OriginalPrice />
+                  <OverrideReason />
+               </PriceInfo>
+               <Quantity>
+                  <OrderedQty>2</OrderedQty>
+                  <OrderedQtyUOM>unit</OrderedQtyUOM>
+                  <CancelledQty>0</CancelledQty>
+                  <TotalAllocatedQty>2</TotalAllocatedQty>
+                  <TotalCancelledQty>0</TotalCancelledQty>
+               </Quantity>
+               <ShippingInfo>
+                  <MustDeliverBy>4/23/18 20:00 EDT</MustDeliverBy>
+                  <PromisedDeliveryBy>4/23/18 16:01 EDT</PromisedDeliveryBy>
+                  <RequestedDeliveryBy>4/23/18 16:01 EDT</RequestedDeliveryBy>
+                  <ShipVia>A1</ShipVia>
+                  <DesignatedCarrierCode>SFWY</DesignatedCarrierCode>
+                  <DesignatedModeCode>LTL</DesignatedModeCode>
+                  <DesignatedServiceLevelCode>A1</DesignatedServiceLevelCode>
+                  <ShipToFacility />
+                  <DeliveryOption>Ship to address</DeliveryOption>
+                  <ShippingAddress>
+                     <ShipToFirstName>shelly</ShipToFirstName>
+                     <ShipToLastName>berg 9</ShipToLastName>
+                     <ShipToAddressLine1>4 Queensbridge Ct</ShipToAddressLine1>
+                     <ShipToAddressLine2 />
+                     <ShipToAddressLine3 />
+                     <ShipToCity>Cockeysville</ShipToCity>
+                     <ShipToState>MD</ShipToState>
+                     <ShipToPostalCode>21030</ShipToPostalCode>
+                     <ShipToCounty />
+                     <ShipToCountry>US</ShipToCountry>
+                     <ShipToPhone>5614034690</ShipToPhone>
+                     <ShipToEmail>shellyberg03@gmail.com</ShipToEmail>
+                     <ShipToFax />
+                  </ShippingAddress>
+               </ShippingInfo>
+               <DiscountDetails />
+               <ChargeDetails />
+               <TaxDetails />
+               <Notes />
+               <WMNotes>
+                  <WMNote>
+                     <NoteType>UC</NoteType>
+                     <NoteSeq>1</NoteSeq>
+                     <NoteCode />
+                     <Visibility>0</Visibility>
+                     <CommentText>please try to get all white and place in a large bag</CommentText>
+                  </WMNote>
+               </WMNotes>
+               <LineReferenceFields>
+                  <ReferenceField1>0</ReferenceField1>
+                  <ReferenceField2>0</ReferenceField2>
+                  <ReferenceField3>3.9500000476837158</ReferenceField3>
+                  <ReferenceField4>2</ReferenceField4>
+                  <ReferenceField5 />
+                  <ReferenceField6 />
+                  <ReferenceField7 />
+                  <ReferenceField8 />
+                  <ReferenceField9>AM</ReferenceField9>
+                  <ReferenceField10>29728872</ReferenceField10>
+                  <ReferenceNumber1 />
+                  <ReferenceNumber2 />
+                  <ReferenceNumber3 />
+                  <ReferenceNumber4 />
+                  <ReferenceNumber5 />
+               </LineReferenceFields>
+               <CustomFieldList />
+               <LineWMProcessInfo />
+               <SKUAttributes>
+                  <InventoryType />
+                  <ProductStatus />
+                  <BatchNumber />
+                  <SKUAttribute1 />
+                  <SKUAttribute2 />
+                  <SKUAttribute3 />
+                  <SKUAttribute4 />
+                  <SKUAttribute5 />
+                  <CountryOfOrigin />
+               </SKUAttributes>
+               <Extension>
+                  <SegmentID />
+               </Extension>
+               <AllocationDetails>
+                  <AllocationDetail>
+                     <ItemID>960277392</ItemID>
+                     <AllocatedQuantity>2</AllocatedQuantity>
+                     <AllocatedQtyUOM>unit</AllocatedQtyUOM>
+                     <SupplyType>OH</SupplyType>
+                     <SupplyID />
+                     <SupplyDetailID />
+                     <IsVirtualAllocation>true</IsVirtualAllocation>
+                     <SubstitutionRatio>1</SubstitutionRatio>
+                     <TierId>Default</TierId>
+                     <OriginFacilityAliasID>2979</OriginFacilityAliasID>
+                     <FacilityType>CS</FacilityType>
+                     <CommittedShipDTTM>4/23/18 02:18 EDT</CommittedShipDTTM>
+                     <CommittedDeliveryDTTM>4/23/18 03:18 EDT</CommittedDeliveryDTTM>
+                     <MustReleaseByDTTM>4/23/18 15:01 EDT</MustReleaseByDTTM>
+                     <MustShipByDTTM>4/23/18 15:01 EDT</MustShipByDTTM>
+                     <CreatedDTTM>4/23/18 00:18 MDT</CreatedDTTM>
+                     <ModifiedDTTM>4/23/18 00:18 MDT</ModifiedDTTM>
+                     <AllocationStatus>OPEN</AllocationStatus>
+                     <SubstitutionType />
+                     <InventorySegmentName />
+                     <RequiredCapacityPerUnit />
+                  </AllocationDetail>
+               </AllocationDetails>
+               <SplitLines />
+            </OrderLine>
+         </OrderLines>
+         <DistributionOrders />
+         <ShipmentDetails />
+         <OriginalInvoiceList />
+         <Invoices />
+         <OrderedTotals>
+            <TotalCharges>3.95</TotalCharges>
+            <TotalDiscounts>0.00</TotalDiscounts>
+            <TotalTaxes>0.00</TotalTaxes>
+            <LineSubTotal>30.11</LineSubTotal>
+            <GrandTotal>34.06</GrandTotal>
+         </OrderedTotals>
+      </Order>
+   </Message>
+</tXML>
