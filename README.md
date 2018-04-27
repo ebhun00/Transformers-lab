@@ -1,7 +1,9 @@
 # Transformers-lab
 
 # project checkout:
+```git
 git clone https://github.com/ebhun00/Transformers-lab.git
+```
 
 # project build
 ```gradle
