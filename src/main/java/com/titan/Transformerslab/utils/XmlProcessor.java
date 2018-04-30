@@ -97,6 +97,7 @@ public class XmlProcessor {
 	public class GenericObject {
 	}
 
+	@SuppressWarnings("deprecation")
 	public static class CustomDeserializer extends UntypedObjectDeserializer {
 		private static final long serialVersionUID = -4628994110702279382L;
 
@@ -147,7 +148,7 @@ public class XmlProcessor {
 			return result;
 		}
 
-		@SuppressWarnings("unchecked")
+		@SuppressWarnings({ "unchecked", "rawtypes" })
 		private Object handleMaultipleValue(Map<String, Object> map, String key, Object value) {
 			if (!map.containsKey(key)) {
 				return value;

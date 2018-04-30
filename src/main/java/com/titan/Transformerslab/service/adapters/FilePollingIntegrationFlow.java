@@ -3,7 +3,6 @@ package com.titan.Transformerslab.service.adapters;
 
 import java.io.File;
 import java.io.StringWriter;
-import java.util.Arrays;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.Transformer;
@@ -23,13 +22,8 @@ import org.springframework.integration.core.MessageSource;
 import org.springframework.integration.dsl.IntegrationFlow;
 import org.springframework.integration.dsl.IntegrationFlows;
 import org.springframework.integration.dsl.core.Pollers;
-import org.springframework.integration.file.DirectoryScanner;
 import org.springframework.integration.file.FileReadingMessageSource;
-import org.springframework.integration.file.RecursiveDirectoryScanner;
 import org.springframework.integration.file.dsl.Files;
-import org.springframework.integration.file.filters.AcceptOnceFileListFilter;
-import org.springframework.integration.file.filters.CompositeFileListFilter;
-import org.springframework.integration.file.filters.RegexPatternFileListFilter;
 import org.springframework.integration.transaction.DefaultTransactionSynchronizationFactory;
 import org.springframework.integration.transaction.ExpressionEvaluatingTransactionSynchronizationProcessor;
 import org.springframework.integration.transaction.PseudoTransactionManager;
@@ -37,8 +31,6 @@ import org.springframework.integration.transaction.TransactionSynchronizationFac
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
-
-import com.titan.Transformerslab.TransformersLabApplication;
 
 @Configuration
 public class FilePollingIntegrationFlow {
@@ -60,8 +52,8 @@ public class FilePollingIntegrationFlow {
                         .maxMessagesPerPoll(maxMessagesPerPoll)
                         .transactionSynchronizationFactory(transactionSynchronizationFactory())
                         .transactional(transactionManager())))
-//                .transform(Files.toStringTransformer("UTF-8"))
-                .channel("inbound-channel")
+                .transform(Files.toStringTransformer("UTF-8"))
+                .channel("rp-input-inbound-channel")
                 .get();
     }
 

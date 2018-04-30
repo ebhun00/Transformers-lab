@@ -10,6 +10,7 @@ import com.titan.Transformerslab.domain.Order;
 import com.titan.Transformerslab.repository.EOMRepository;
 import com.titan.Transformerslab.repository.OrderRepositoryCustomImpl;
 import com.titan.Transformerslab.service.OrderService;
+import com.titan.Transformerslab.utils.DateUtils;
 
 @RestController
 public class OrderController {
@@ -46,7 +47,7 @@ public class OrderController {
 	@RequestMapping("/order-details/{storeNumber}/shift/{shiftNumber}")
 	public void getEOMStoreShifOrders(@PathVariable(name = "storeNumber") String storeNumber, 
 			@PathVariable(name = "shiftNumber") String shiftNumber) throws Exception {
-		eomRepository.getShiftOrders(storeNumber,shiftNumber);
+		eomRepository.getShiftOrders(storeNumber,shiftNumber, DateUtils.getCurrentDateIn_YYYYMMDD());
 	}
 
 }

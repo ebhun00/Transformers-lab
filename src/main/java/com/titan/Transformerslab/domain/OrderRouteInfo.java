@@ -5,8 +5,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonTypeName;
-import com.fasterxml.jackson.annotation.JsonValue;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,7 +14,9 @@ import lombok.Setter;
 @Getter
 @JsonTypeName("DocStop")
 @JsonIgnoreProperties(ignoreUnknown = true)	
+@AllArgsConstructor
 public class OrderRouteInfo {
+	
 	String orderId;
 	
 	@JsonProperty("PlannedArrivedDate")

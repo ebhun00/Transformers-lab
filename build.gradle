@@ -64,6 +64,7 @@ dependencies {
     compile "com.github.noraui:ojdbc7:12.1.0.2"
     compile "org.springframework:spring-jdbc:4.3.8.RELEASE"
     compile "org.springframework:spring-oxm:4.3.8.RELEASE"
+    compile "commons-beanutils:commons-beanutils:1.9.3"
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 

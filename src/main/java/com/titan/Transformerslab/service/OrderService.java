@@ -1,6 +1,5 @@
 package com.titan.Transformerslab.service;
 
-import java.io.ByteArrayOutputStream;
 
 import javax.xml.soap.MessageFactory;
 import javax.xml.soap.MimeHeaders;
@@ -16,6 +15,9 @@ import javax.xml.soap.SOAPPart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Service;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import com.titan.Transformerslab.utils.SoapMessageUtils;
 
@@ -54,7 +56,8 @@ public class OrderService {
 		soapBodyElem2.addTextNode(SoapMessageUtils.getOrderInputXml(OrderNumber));
 	}
 	
-	private  void callSoapWebService(String soapAction, String orderNumber) {
+	private  String callSoapWebService(String soapAction, String orderNumber) {
+		String orderXml = null;
 		try {
 
 			String token = eomTokenService.getEomToken();
@@ -64,16 +67,19 @@ public class OrderService {
 			SOAPMessage orderRequest = createOrderSOAPRequest(soapAction, token, orderNumber);
 			
 			SOAPMessage orderResponse = soapConnection.call(orderRequest, coUrl);
-//			orderResponse.writeTo(System.out);
-			ByteArrayOutputStream baos = new ByteArrayOutputStream();  
-			orderResponse.writeTo(baos);  
-			log.info(baos.toString());
-			
+			SOAPBody soapBody = orderResponse.getSOAPBody();
+			NodeList nodeList = soapBody.getElementsByTagName("return");
+			Element element = (Element) nodeList.item(0);
+			Node child = element.getFirstChild();
+			orderXml = child.getTextContent();
+
 			soapConnection.close();
 		} catch (Exception e) {
 			log.error(
 					"\nError occurred while sending SOAP Request to Server!\nMake sure you have the correct endpoint URL and SOAPAction!\n" + e.getMessage());
 		}
+		
+		return orderXml;
 	}
 	
 	
@@ -93,9 +99,9 @@ public class OrderService {
 		return soapMessage;
 	}
 
-	public void getOrderDetails(String orderNumber) {
+	public String getOrderDetails(String orderNumber) {
 		String soapAction = "";
-		callSoapWebService(soapAction,orderNumber);
+		return callSoapWebService(soapAction,orderNumber);
 	}
 
 }

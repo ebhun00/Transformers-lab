@@ -35,13 +35,10 @@ public class MongoConfiguration extends AbstractMongoConfiguration {
 
 	@Bean
 	public MongoDbFactory mongoDbFactory() throws Exception {
-		// ServerAddress serverAddress = new ServerAddress("127.0.0.1", 27017);
-		// MongoCredential mongoCredential = MongoCredential.createCredential("user",
-		// "test", "abc123".toCharArray());
-		// MongoClient mongoClient = new MongoClient("127.0.0.1", 27017);
 		return new SimpleMongoDbFactory(mongoClient(), databaseName);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Bean
 	public MongoTemplate mongoTemplate() throws Exception {
 		MappingMongoConverter converter = new MappingMongoConverter(mongoDbFactory(), new MongoMappingContext());

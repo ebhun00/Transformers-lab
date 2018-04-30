@@ -1,4 +1,4 @@
-package com.titan.Transformerslab.service;
+package com.titan.Transformerslab.service.Mappers;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -34,10 +34,12 @@ public class RPResponseContentMapper {
 			ObjectMapper objectMapper = new ObjectMapper();
 
 			objectMapper.configure(DeserializationFeature.FAIL_ON_NULL_FOR_PRIMITIVES, false);
+			objectMapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
+			
 			routeInfo = objectMapper.readValue(json, RoutePlannerStoreShiftInfo.class);
 			System.out.println(routeInfo.toString());
 		} catch (Exception e) {
-			System.out.println(e.toString());
+			log.error(e.toString());
 		}
 		return routeInfo;
 	}
@@ -53,12 +55,9 @@ public class RPResponseContentMapper {
 			mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
 			Object map = xmlMapper.readValue(xml, GenericObject.class);
 			String json = mapper.writeValueAsString(map);
-			System.out.println("conversion completed");
-			log.info(json);
 			jsonResult = json;
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			log.error(e.toString());
 		}
 		return jsonResult;
 	}
@@ -67,6 +66,7 @@ public class RPResponseContentMapper {
 	public class GenericObject {
 	}
 
+	@SuppressWarnings("deprecation")
 	public static class CustomDeserializer extends UntypedObjectDeserializer {
 		private static final long serialVersionUID = -4628994110702279382L;
 
@@ -117,7 +117,7 @@ public class RPResponseContentMapper {
 			return result;
 		}
 
-		@SuppressWarnings("unchecked")
+		@SuppressWarnings({ "unchecked", "rawtypes" })
 		private Object handleMaultipleValue(Map<String, Object> map, String key, Object value) {
 			if (!map.containsKey(key)) {
 				return value;

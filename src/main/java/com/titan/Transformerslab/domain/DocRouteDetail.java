@@ -19,7 +19,7 @@ import lombok.Setter;
 public class DocRouteDetail {
 
 	@JsonProperty("ResourceKey")
-	private String van;
+	private String resourceKey;
 	
 	@JsonProperty("RouteID")
 	private String routeId ;

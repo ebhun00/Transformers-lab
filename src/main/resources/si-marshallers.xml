@@ -16,21 +16,31 @@
     http://www.springframework.org/schema/integration/xml/spring-integration-xml.xsd">
 
 
-	<int:channel id="xml-inboundChannel" />
+	<int:channel id="xml_inboundChannel" />
 	<int:channel id="outboundChannel" />
 	<int:channel id="inbound-channel" />
+	<int:channel id="rp-input-inbound-channel" />
+	<int:channel id="rp-outbound-channel" />
+	<int:channel id="xml_objectInboundChannel" />
 	
-	<int-file:file-to-string-transformer
+	
+	<!-- <int-file:file-to-string-transformer
 		id="file-2-string-transformer" input-channel="inbound-channel"
-		output-channel="xml-inboundChannel" charset="UTF-8" />
-
+		output-channel="xml-inboundChannel" charset="UTF-8" /> -->
+	<int:object-to-string-transformer input-channel="xml_objectInboundChannel" output-channel="xml_inboundChannel"/>
+	
 	<int-xml:unmarshalling-transformer
-		id="xml-2-object-transformer" input-channel="xml-inboundChannel"
-		output-channel="outboundChannel" unmarshaller="jaxbMarshaller" />
+		id="xml-2-object-transformer" input-channel="xml_inboundChannel" 
+		output-channel="outboundChannel" unmarshaller="jaxbMarshallerCOExport" />
 
-	<bean id="jaxbMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+	<bean id="jaxbMarshallerCOExport" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
 		<property name="contextPath"
 			value="com.titan.Transformerslab.xsd.coExport.domains" />
 	</bean>
+	
+	<!-- <bean id="jaxbMarshallerCoImport" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+		<property name="contextPath"
+			value="com.titan.Transformerslab.xsd.coImport.domains" />
+	</bean> -->
 </beans>
 	
