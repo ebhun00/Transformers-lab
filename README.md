@@ -44,23 +44,31 @@ nohup mongod -port  27017 -dbpath=data/db &
 
 	Move to local folder where app jar is available , example : cd /drives/c/customInfo/development/exp/Transformers-lab/build/libs
 	scp ETL-transformer-0.0.1.jar ii00wl@qg01064e:/apps/scope/custom/
+	nohup java -jar ETL-transformer-0.0.1.jar &
 	
 	
 	
 
 #Swagger Url-QA:	
+```
 http://qg01064e.safeway.com:8081/swagger-ui.html#
+```
 
 #Currently Application has 2 dormants
 1.	XmlApproach / DBUpdate approach, currently XmlApproach is disabled, DBUpdate is active , and can be switched with out app downtime.
-2.	Flag to process for specific stores, we can add more store in runtime by this endpoints : http://qg01064e.safeway.com:8081/app-config/key/stores/value/1713,1502
+2.	Flag to process for specific stores, we can add more store in runtime by this endpoints : 
+```
+http://qg01064e.safeway.com:8081/app-config/key/stores/value/1713,1502
+```
 	
 # Files has to drop in below folder:
 
+```
 host: qg01064e.safeway.com
 path: /apps/scope/custom/inbound
 Folders
 read : to receive input files
 processed : successfully processed files moved to this folder
 failed: Failed processed files moved to this folder
+```
 
