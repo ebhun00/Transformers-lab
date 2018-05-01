@@ -34,5 +34,5 @@ public class DocRouteDetail {
 	private String planDepartDate_RefF6;
 	
 	@JsonProperty("DocStop")
-	private List<OrderRouteInfo> docRouteDetail = new ArrayList<OrderRouteInfo>();
+	private List<OrderRouteInfo> orderRouteInfoList = new ArrayList<OrderRouteInfo>();
 }

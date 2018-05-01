@@ -24,6 +24,7 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+/inbound/
 
 # Package Files #
 *.jar

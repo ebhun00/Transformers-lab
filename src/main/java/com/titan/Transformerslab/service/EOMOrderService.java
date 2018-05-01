@@ -15,7 +15,6 @@ import org.springframework.messaging.MessageChannel;
 import org.springframework.stereotype.Service;
 
 import com.titan.Transformerslab.domain.AppConfigs;
-import com.titan.Transformerslab.domain.OrderRouteInfo;
 import com.titan.Transformerslab.domain.RPDataWrapper;
 import com.titan.Transformerslab.domain.RPOrderDomain;
 import com.titan.Transformerslab.domain.ResourceKey;
@@ -106,10 +105,9 @@ public class EOMOrderService {
 		if (rpRouteDetailsByOrder.containsKey(orderId)) {
 			return rpRouteDetailsByOrder.get(orderId);
 		} else {
-			OrderRouteInfo orderRouteInfo = new OrderRouteInfo(orderId, DateUtils.getCurrentDateIn_MMDDYYYY(),
-					DateUtils.getCurrentDateIn_MMDDYYYY(), "00" + stopIdForUnrouted, "", "", "");
+			
 			return new RPOrderDomain("UR1" + resourceKey.getShift(), "1111111", resourceKey.getStoreNumber(),
-					DateUtils.getCurrentDateIn_MMDDYYYY(), orderRouteInfo);
+					DateUtils.getCurrentDateIn_MMDDYYYY(), orderId,DateUtils.getCurrentDateIn_MMDDYYYY(), "00" + stopIdForUnrouted, resourceKey.getShift(), resourceKey.getDate());
 		}
 	}
 
@@ -130,5 +128,4 @@ public class EOMOrderService {
 		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 		marshaller.marshal(coImport, System.out);
 	}
-
 }

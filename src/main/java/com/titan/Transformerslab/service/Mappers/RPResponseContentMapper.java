@@ -37,7 +37,6 @@ public class RPResponseContentMapper {
 			objectMapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
 			
 			routeInfo = objectMapper.readValue(json, RoutePlannerStoreShiftInfo.class);
-			System.out.println(routeInfo.toString());
 		} catch (Exception e) {
 			log.error(e.toString());
 		}

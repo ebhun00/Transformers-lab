@@ -1,5 +1,7 @@
 package com.titan.Transformerslab.repository;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -9,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 import com.mongodb.WriteResult;
 import com.titan.Transformerslab.domain.Order;
+import com.titan.Transformerslab.domain.RPOrderDomain;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -43,6 +46,11 @@ public class OrderRepositoryCustomImpl implements OrderRepositoryCustom {
 
 	public void updateOrder(Order order) {
 
+	}
+
+	@Override
+	public void saveOrders(List<RPOrderDomain> orders) {
+		mongoTemplate.insert(orders, RPOrderDomain.class);
 	}
 
 }

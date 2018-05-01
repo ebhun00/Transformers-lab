@@ -135,16 +135,16 @@ public class EOMRepositoryImpl implements EOMRepository {
         		.addValue("van",orderupdate.getVan())
         		.addValue("departDate1", orderupdate.getPlanDepartDate_RefF2())
         		.addValue("routeId", orderupdate.getRouteId())
-        		.addValue("arrivalDate1", orderupdate.getDocRouteDetail().getPlanArriveDate_RefF4())
-		        .addValue("stopId", orderupdate.getDocRouteDetail().getStopNumber_RefF5())
+        		.addValue("arrivalDate1", orderupdate.getPlanArriveDate_RefF4())
+		        .addValue("stopId", orderupdate.getStopNumber_RefF5())
 				.addValue("departDate2", orderupdate.getPlanDepartDate_RefF2())
-		        .addValue("arrivalDate2",orderupdate.getDocRouteDetail().getPlanArriveDate_RefF4())
-				.addValue("orderId", orderupdate.getDocRouteDetail().getOrderId());
+		        .addValue("arrivalDate2",orderupdate.getPlanArriveDate_RefF4())
+				.addValue("orderId", orderupdate.getOrderId());
         int status = namedParameterJdbcTemplate.update(updateQuery, namedParameters); 
         if(status != 0){
-        	log.info("Order data updated for Order ID : " + orderupdate.getDocRouteDetail().getOrderId());
+        	log.info("Order data updated for Order ID : " + orderupdate.getOrderId());
         }else{
-        	log.info("No Order data found with ID : " + orderupdate.getDocRouteDetail().getOrderId());
+        	log.info("No Order data found with ID : " + orderupdate.getOrderId());
         }
     }
 }
