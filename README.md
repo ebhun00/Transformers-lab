@@ -49,12 +49,12 @@ nohup mongod -port  27017 -dbpath=data/db &
 	
 	
 
-#Swagger Url-QA:	
+# Swagger Url-QA:	
 ```
 http://qg01064e.safeway.com:8081/swagger-ui.html#
 ```
 
-#Currently Application has 2 dormants
+# Currently Application has 2 dormants
 1.	XmlApproach / DBUpdate approach, currently XmlApproach is disabled, DBUpdate is active , and can be switched with out app downtime.
 2.	Flag to process for specific stores, we can add more store in runtime by this endpoints : 
 ```
@@ -72,5 +72,5 @@ processed : successfully processed files moved to this folder
 failed: Failed processed files moved to this folder
 ```
 
-#Order sequence logic:
+# Order sequence logic:
 ![alt text](https://github.com/ebhun00/Transformers-lab/blob/master/documentation/ETL-Replacement/order_sequence_design.jpg)
