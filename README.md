@@ -16,6 +16,7 @@ gradlew.bat bootRun  -- to run application in local
 ```link
 checkout "documentation" folder
 https://github.com/ebhun00/Transformers-lab/blob/master/documentation/ETL-Replacement/ETL_replacement.pptx
+<<<<<<< Updated upstream
 ```
 
 
@@ -72,3 +73,6 @@ processed : successfully processed files moved to this folder
 failed: Failed processed files moved to this folder
 ```
 
+=======
+```
+>>>>>>> Stashed changes

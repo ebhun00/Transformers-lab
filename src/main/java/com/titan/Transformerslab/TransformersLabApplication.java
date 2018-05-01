@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 @SpringBootApplication
 @ImportResource("classpath:si-marshallers.xml")
 @Slf4j
+
 public class TransformersLabApplication {
 
 	public static void main(String[] args) {

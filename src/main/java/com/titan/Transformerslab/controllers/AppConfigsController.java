@@ -15,6 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @Slf4j
+
 public class AppConfigsController {
 
 	@Autowired
@@ -40,6 +41,7 @@ public class AppConfigsController {
 	@GetMapping("/app-config/")
 	public List<AppConfigs> getAppconfig() throws Exception {
 		log.info("Getting all appConfig details");
+
 		List<AppConfigs> configs = appConfigsRepositoryImpl.find();
 		return configs;
 	}
