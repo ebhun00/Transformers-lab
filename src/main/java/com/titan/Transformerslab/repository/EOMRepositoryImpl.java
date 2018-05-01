@@ -91,6 +91,8 @@ public class EOMRepositoryImpl implements EOMRepository {
 		parameters.addValue("shiftNumber", shiftNumber);
 		parameters.addValue("shift_date", date);
 		parameters.addValue("facility_name", storeNumber);
+		
+		log.debug("Query to fetch  shift "+ shiftNumber + "  & store "+ storeNumber + " details \n "+ query);
 
 		List<ShiftOrderDetails> shiftOrdersList = (List<ShiftOrderDetails>) namedParameterJdbcTemplate.query(query,
 				parameters, new RowMapper<ShiftOrderDetails>() {
@@ -105,6 +107,7 @@ public class EOMRepositoryImpl implements EOMRepository {
 				shiftOrdersMap.put(orderDetails.getOrderKey(), orderDetails);
 		});
 
+		log.debug("Route info : "+ shiftOrdersMap);
 		return shiftOrdersMap;
 	}
 

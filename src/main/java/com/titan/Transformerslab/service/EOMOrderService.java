@@ -67,14 +67,17 @@ public class EOMOrderService {
 				eomshiftOrders = eomRepository.getShiftOrders(resourceKey.getStoreNumber(), resourceKey.getShift(),
 						resourceKey.getDate());
 
-				if (Boolean.getBoolean(appConfigs.getValue()))
+				if (Boolean.getBoolean(appConfigs.getValue())) {
+					log.info("Moving with "+ appConfigs.getValue()+ " appoach");
 					for (Map.Entry<String, ShiftOrderDetails> entry : eomshiftOrders.entrySet()) {
 						String eomOrderXml = orderService.getOrderDetails(entry.getKey());
 						MessageChannel channel = (MessageChannel) context.getBean("xml_objectInboundChannel");
 						channel.send(MessageBuilder.withPayload(eomOrderXml).build());
 					}
+				}
 				else {
 					for (Map.Entry<String, ShiftOrderDetails> entry : eomshiftOrders.entrySet()) {
+						log.info("Moving with DBUpdate appoach");
 						if (wrapper.getRpOrderInfoMap().containsKey(entry.getKey())) {
 							eomRepository.updateOrderWithShiftDetails(wrapper.getRpOrderInfoMap().get(entry.getKey()));
 						} else {
@@ -94,6 +97,7 @@ public class EOMOrderService {
 
 	public RPOrderDomain orderUpdateDataForUnRoutedOrder(String orderId, ShiftOrderDetails shiftOrder,
 			RPDataWrapper rpOrderInfoMap, int stopIdForUnrouted) {
+		log.debug("Preparing Route  info for an order {} .", orderId);
 		ResourceKey resourceKey = rpOrderInfoMap.getResourceKey();
 		Map<String, RPOrderDomain> rpRouteDetailsByOrder = rpOrderInfoMap.getRpOrderInfoMap();
 		if (rpRouteDetailsByOrder.containsKey(orderId)) {

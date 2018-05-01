@@ -12,7 +12,10 @@ import com.titan.Transformerslab.repository.OrderRepositoryCustomImpl;
 import com.titan.Transformerslab.service.OrderService;
 import com.titan.Transformerslab.utils.DateUtils;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
+@Slf4j
 public class OrderController {
 
 	@Autowired
@@ -26,7 +29,7 @@ public class OrderController {
 	
 	@RequestMapping("/order/{orderNumber}")
 	public Order save(@PathVariable(name = "orderNumber") String orderNumber) {
-
+		log.info("Fetching order details for order "+ orderNumber);
 		Order order = new Order(orderNumber, "Titan");
 		orderRepositoryCustomImpl.saveOrder(order);
 		return order;
@@ -41,6 +44,7 @@ public class OrderController {
 	
 	@RequestMapping("/order-details/{orderNumber}")
 	public void getOrderDetails(@PathVariable(name = "orderNumber") String orderNumber) {
+		log.info("Fetching order details for order from EOM "+ orderNumber);
 		orderService.getOrderDetails(orderNumber);
 	}
 	

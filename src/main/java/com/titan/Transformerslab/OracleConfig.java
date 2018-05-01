@@ -14,10 +14,12 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 import oracle.jdbc.pool.OracleDataSource;
 
 @Configuration
 @ConfigurationProperties("oracle")
+@Slf4j
 public class OracleConfig {
 
 	@Setter
@@ -48,6 +50,7 @@ public class OracleConfig {
 	
 	@Bean
 	public NamedParameterJdbcTemplate getNamedParamJDBCTemplate() throws SQLException {
+		log.info("Creating NamedParameterJdbcTemplate avaialble for application");
 		return new NamedParameterJdbcTemplate(dataSource());
 	};
 	

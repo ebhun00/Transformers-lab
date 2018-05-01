@@ -57,8 +57,7 @@ public class EomTokenService {
 			soapConnection.close();
 			
 		} catch (Exception e) {
-			System.err.println(
-					"\nError occurred while sending SOAP Request to Server!\nMake sure you have the correct endpoint URL and SOAPAction!\n");
+			log.error(e.getMessage());
 			e.printStackTrace();
 		}
 		this.eomToken = token;

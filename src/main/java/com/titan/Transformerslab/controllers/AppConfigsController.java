@@ -11,7 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.titan.Transformerslab.domain.AppConfigs;
 import com.titan.Transformerslab.repository.AppConfigsRepositoryImpl;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
+@Slf4j
 public class AppConfigsController {
 
 	@Autowired
@@ -21,6 +24,7 @@ public class AppConfigsController {
 	public void updateAppconfig(@PathVariable(name = "key") String key, @PathVariable(name = "value") String value)
 			throws Exception {
 
+		log.info("Saving AppConfig for the key" + key  +"and Value : "+ value);
 		AppConfigs config = new AppConfigs(key, value);
 
 		appConfigsRepositoryImpl.saveAppConfig(config);
@@ -28,14 +32,14 @@ public class AppConfigsController {
 
 	@GetMapping("/app-config/key/{key}")
 	public AppConfigs getAppconfigByKey(@PathVariable(name = "key") String key) throws Exception {
-
+		log.info("getting AppConfig for the key" + key);
 		AppConfigs config = appConfigsRepositoryImpl.findByKey(key);
 		return config;
 	}
 	
 	@GetMapping("/app-config/")
-	public List<AppConfigs> getAppconfigByKey() throws Exception {
-
+	public List<AppConfigs> getAppconfig() throws Exception {
+		log.info("Getting all appConfig details");
 		List<AppConfigs> configs = appConfigsRepositoryImpl.find();
 		return configs;
 	}

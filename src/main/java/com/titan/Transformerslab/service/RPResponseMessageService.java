@@ -16,7 +16,10 @@ import com.titan.Transformerslab.domain.ResourceKey;
 import com.titan.Transformerslab.domain.RoutePlannerStoreShiftInfo;
 import com.titan.Transformerslab.service.Mappers.RPResponseContentMapper;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Component
+@Slf4j
 public class RPResponseMessageService {
 
 	@Autowired
@@ -24,6 +27,7 @@ public class RPResponseMessageService {
 
 	@ServiceActivator(inputChannel = "rp-input-inbound-channel", outputChannel="rp-outbound-channel")
 	public RPDataWrapper receiveMesssage(String rpInputString) {
+		log.debug("RP input as JSON : {}", rpInputString);
 		RoutePlannerStoreShiftInfo routeInfo = rpResponseContentMapper.getRPRouteDetails(rpInputString);
 		Map<String, RPOrderDomain> rpOrderInfoMap = mapByOrderId(routeInfo.getRequest());
 		
@@ -38,7 +42,8 @@ public class RPResponseMessageService {
 		Map<String, RPOrderDomain> rpOrderInfoMap = new HashMap<String, RPOrderDomain>();
 		request.getDocRouteDetails().forEach(docRouteDetail -> {
 			List<String> storeShiftVanInfo = Arrays.asList(docRouteDetail.getResourceKey().split("_"));
-			RPOrderDomain domain = new RPOrderDomain(storeShiftVanInfo.get(3), docRouteDetail.getRouteId(),
+			log.info("Preparing route info for : store :{} Shift:{} date :{}  van : {} ", storeShiftVanInfo.get(0), storeShiftVanInfo.get(1), storeShiftVanInfo.get(2), storeShiftVanInfo.get(3));
+			RPOrderDomain domain = new RPOrderDomain((storeShiftVanInfo.get(3)+storeShiftVanInfo.get(1)), docRouteDetail.getRouteId(),
 					storeShiftVanInfo.get(0), docRouteDetail.getPlanDepartDate_RefF2(), null);
 			docRouteDetail.getDocRouteDetail().forEach(orderRouteInfo -> {
 				domain.setDocRouteDetail(orderRouteInfo);

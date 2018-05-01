@@ -20,3 +20,33 @@ AND POLI.IS_DELETED=0
 '' as StopOrderLine,
 '' as VanDepartTime,
 '' as VanArrivalTime from Dual;
+
+
+UPDATE osflca.po_ref_fields
+    SET
+        ref_field1 = 'UR1<SHIFT>',
+        ref_field2 = '<VAN_DEPARTURE_DTTM>',
+        ref_field3 = '1111111',
+        ref_field4 = '<ESTIMATED_ARRIVAL_TIME>',
+        ref_field5 = '<STOP_NUM>',
+        ref_field6 = '<VAN_DEPARTURE_DTTM>',
+        ref_field7 = '<ESTIMATED_ARRIVAL_TIME>'
+WHERE
+    purchase_orders_id = (
+        SELECT
+            purchase_orders_id
+        FROM
+            osflca.purchase_orders
+        WHERE
+            tc_purchase_orders_id = '<ORDER_NUM>'
+    );
+    
+    
+    select * from osflca.po_ref_fields where  purchase_orders_id = (
+        SELECT
+            purchase_orders_id
+        FROM
+            osflca.purchase_orders
+        WHERE
+            tc_purchase_orders_id = '1094499'
+    );
