@@ -72,5 +72,19 @@ processed : successfully processed files moved to this folder
 failed: Failed processed files moved to this folder
 ```
 
+#Log level changes
+
+
+**Log level to info:**
+
+```
+  http://localhost:8081/loglevel/info?package=com.titan
+  ```
+**Log level to debug:** 
+
+```
+http://localhost:8081/loglevel/debug?package=com.titan
+```
+
 # Order sequence logic:
 ![alt text](https://github.com/ebhun00/Transformers-lab/blob/master/documentation/ETL-Replacement/order_sequence_design.jpg)
