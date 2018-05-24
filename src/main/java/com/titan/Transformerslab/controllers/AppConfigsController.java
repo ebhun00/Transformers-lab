@@ -3,9 +3,12 @@ package com.titan.Transformerslab.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.titan.Transformerslab.domain.AppConfigs;
@@ -15,7 +18,6 @@ import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @Slf4j
-
 public class AppConfigsController {
 
 	@Autowired
@@ -25,19 +27,20 @@ public class AppConfigsController {
 	public void updateAppconfig(@PathVariable(name = "key") String key, @PathVariable(name = "value") String value)
 			throws Exception {
 
-		log.info("Saving AppConfig for the key" + key  +"and Value : "+ value);
+		log.info("Saving AppConfig for the key" + key + "and Value : " + value);
 		AppConfigs config = new AppConfigs(key, value);
 
 		appConfigsRepositoryImpl.saveAppConfig(config);
 	}
 
 	@GetMapping("/app-config/key/{key}")
-	public AppConfigs getAppconfigByKey(@PathVariable(name = "key") String key) throws Exception {
+	@ResponseBody
+	public ResponseEntity<AppConfigs> getAppconfigByKey(@PathVariable(name = "key") String key) throws Exception {
 		log.info("getting AppConfig for the key" + key);
 		AppConfigs config = appConfigsRepositoryImpl.findByKey(key);
-		return config;
+		return new ResponseEntity<AppConfigs>(config, HttpStatus.OK);
 	}
-	
+
 	@GetMapping("/app-config/")
 	public List<AppConfigs> getAppconfig() throws Exception {
 		log.info("Getting all appConfig details");
